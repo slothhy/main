@@ -30,18 +30,19 @@
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
 <li><a href="#adding-a-cinema-code-add-code">3.2. Adding a cinema: <code>add</code></a></li>
-<li><a href="#listing-all-cinemas-code-list-code">3.3. Listing all cinemas : <code>list</code></a></li>
-<li><a href="#editing-a-cinema-code-edit-code">3.4. Editing a cinema : <code>edit</code></a></li>
-<li><a href="#locating-cinemas-by-name-code-find-code">3.5. Locating cinemas by name: <code>find</code></a></li>
-<li><a href="#deleting-a-cinema-code-delete-code">3.6. Deleting a cinema : <code>delete</code></a></li>
-<li><a href="#selecting-a-cinema-code-select-code">3.7. Selecting a cinema : <code>select</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.13. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#adding-a-movie-code-addmovie-code">3.3. Adding a movie: <code>addmovie</code></a></li>
+<li><a href="#listing-all-cinemas-code-list-code">3.4. Listing all cinemas : <code>list</code></a></li>
+<li><a href="#editing-a-cinema-code-edit-code">3.5. Editing a cinema : <code>edit</code></a></li>
+<li><a href="#locating-cinemas-by-name-code-find-code">3.6. Locating cinemas by name: <code>find</code></a></li>
+<li><a href="#deleting-a-cinema-code-delete-code">3.7. Deleting a cinema : <code>delete</code></a></li>
+<li><a href="#selecting-a-cinema-code-select-code">3.8. Selecting a cinema : <code>select</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.9. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">3.10. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.11. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.12. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.13. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.14. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.15. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -202,7 +203,30 @@ A cinema can have any number of tags (including 0)
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-cinemas-code-list-code"><a class="link" href="#listing-all-cinemas-code-list-code">3.3. Listing all cinemas : <code>list</code></a></h3>
+<h3 id="adding-a-movie-code-addmovie-code"><a class="link" href="#adding-a-movie-code-addmovie-code">3.3. Adding a movie: <code>addmovie</code></a></h3>
+<div class="paragraph">
+<p>Alias: <code>am</code></p>
+</div>
+<div class="paragraph">
+<p>Adds a movie to the movie planner<br>
+Format: <code>addmovie n/MOVIENAME d/DURATION r/RATING sd/STARTDATE</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>addmovie n/The Incredibles  d/90 r/PG sd/03/03/2014</code></p>
+</li>
+<li>
+<p><code>addmovie n/Spiderman 1  d/120 r/NC16 sd/01/05/2013</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-cinemas-code-list-code"><a class="link" href="#listing-all-cinemas-code-list-code">3.4. Listing all cinemas : <code>list</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>l</code></p>
 </div>
@@ -215,7 +239,7 @@ Format: <code>list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-cinema-code-edit-code"><a class="link" href="#editing-a-cinema-code-edit-code">3.4. Editing a cinema : <code>edit</code></a></h3>
+<h3 id="editing-a-cinema-code-edit-code"><a class="link" href="#editing-a-cinema-code-edit-code">3.5. Editing a cinema : <code>edit</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>e</code></p>
 </div>
@@ -266,7 +290,7 @@ Edits the name of the 2nd cinema to be <code>Betsy Crower</code> and clears all 
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-cinemas-by-name-code-find-code"><a class="link" href="#locating-cinemas-by-name-code-find-code">3.5. Locating cinemas by name: <code>find</code></a></h3>
+<h3 id="locating-cinemas-by-name-code-find-code"><a class="link" href="#locating-cinemas-by-name-code-find-code">3.6. Locating cinemas by name: <code>find</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>f</code></p>
 </div>
@@ -317,7 +341,7 @@ Returns any cinema having names <code>Betsy</code>, <code>Tim</code>, or <code>J
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-cinema-code-delete-code"><a class="link" href="#deleting-a-cinema-code-delete-code">3.6. Deleting a cinema : <code>delete</code></a></h3>
+<h3 id="deleting-a-cinema-code-delete-code"><a class="link" href="#deleting-a-cinema-code-delete-code">3.7. Deleting a cinema : <code>delete</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>d</code></p>
 </div>
@@ -364,7 +388,7 @@ Deletes the 1st cinema in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-cinema-code-select-code"><a class="link" href="#selecting-a-cinema-code-select-code">3.7. Selecting a cinema : <code>select</code></a></h3>
+<h3 id="selecting-a-cinema-code-select-code"><a class="link" href="#selecting-a-cinema-code-select-code">3.8. Selecting a cinema : <code>select</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>s</code></p>
 </div>
@@ -411,7 +435,7 @@ Selects the 1st cinema in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.8. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.9. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>hist</code></p>
 </div>
@@ -438,7 +462,7 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.9. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.10. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>u</code></p>
 </div>
@@ -489,7 +513,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.10. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.11. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>r</code></p>
 </div>
@@ -527,7 +551,7 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.11. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.12. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>c</code></p>
 </div>
@@ -540,7 +564,7 @@ Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.12. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.13. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
@@ -550,14 +574,14 @@ Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.13. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.14. Saving the data</a></h3>
 <div class="paragraph">
 <p>Movie planner data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.14. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.15. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -623,7 +647,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-14 03:12:17 UTC
+Last updated 2018-03-19 05:25:16 UTC
 </div>
 </div>
 </body>
