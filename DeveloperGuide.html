@@ -46,7 +46,7 @@
 <li><a href="#implementation">4. Implementation</a>
 <ul class="sectlevel2">
 <li><a href="#undo-redo-feature">4.1. Undo/Redo feature</a></li>
-<li><a href="#data-encryption-decryption">4.2. Data Encryption/Decryption</a></li>
+<li><a href="#proposed-data-encryption">4.2. [Proposed] Data Encryption</a></li>
 <li><a href="#logging">4.3. Logging</a></li>
 <li><a href="#Implementation-Configuration">4.4. Configuration</a></li>
 <li><a href="#email-feature">4.5. Email feature</a></li>
@@ -980,154 +980,9 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="data-encryption-decryption"><a class="link" href="#data-encryption-decryption">4.2. Data Encryption/Decryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">4.2. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
-<p>MVP provides data encryption as well as decryption to allow for safe storage and transmission of data.</p>
-</div>
-<div class="paragraph">
-<p>The Sequence Diagram below shows how the components interact for the scenario where the user issues the command <code>encrypt pw/pass</code>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/SDforEncryption.png" alt="SDforEncryption" width="800">
-</div>
-<div class="title">Figure 19. Component interactions for <code>encrypt pw/pass</code> command (part 1)</div>
-</div>
-<div class="paragraph">
-<p>Figure 20 shows how the <code>EventsCenter</code> reacts to that event, which eventually results in the updates being saved to the hard disk.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/SDforEncryptEventHandling.png" alt="SDforEncryptEventHandling" width="800">
-</div>
-<div class="title">Figure 20. Component interactions for <code>encrypt pw/pass</code> command (part 2)</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<code>Decrypt</code> command also follows the same flow as shown in the Sequence Diagram above, but <code>DecryptionRequestEvent</code> is posted and <code>handleDecryptionRequestEvent</code> is called instead.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect3">
-<h4 id="implementation-details"><a class="link" href="#implementation-details">4.2.1. Implementation details</a></h4>
-<div class="paragraph">
-<p><code>SecurityUtil</code> is used to facilitate the encryption and decryption process by providing the <code>encrypt</code> and <code>decrypt</code> commands.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>When <code>encrypt pw/&lt;password&gt;</code> or <code>decrypt pw/&lt;password&gt;</code> command is entered by the user, <code>EncryptionRequestEvent</code> or <code>DecryptionRequestEvent</code> will be posted to the <code>EventsCenter</code> respectively.</p>
-</li>
-<li>
-<p><code>StorageManager</code> will then trigger <code>SecurityUtil</code> to perform the <code>encrypt</code> or <code>decrypt</code> command.</p>
-</li>
-<li>
-<p><code>generateKey()</code> and <code>processFile()</code> methods within <code>SecurityUtil</code> will then be executed to perform writing of files.</p>
-</li>
-<li>
-<p><code>encrypt</code> will create/overwrite an <code>encryptedmovieplanner.xml</code> by encrypting the data from <code>movieplanner.xml</code> using the password provided by the user.</p>
-</li>
-<li>
-<p><code>decrypt</code> will create/overwrite a <code>movieplanner.xml</code> by decrypting the data from <code>encryptedmovieplanner.xml</code> using the password provided by the user.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>If the user enters a different password that was used to encrypt the file when decrypting, an error will be shown on the <code>CommandBox</code>.</p>
-</li>
-<li>
-<p><code>encrypt</code> and <code>decrypt</code> command can be performed repeatedly to overwrite the xml files.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">4.2.2. Design Considerations</a></h4>
-<div class="paragraph">
-<p><strong>Aspect:</strong> How to generate key</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Generating the key using password input by user</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Users can customise their own passwords.</p>
-</li>
-<li>
-<p>Cons: It might not be secured as users would probably use a weak password.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Generating the key using <code>java.crypto.KeyGenerator</code></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Password is quite strong, so even if outsiders were to obtain the data file, they would require tremendous effort to decrypt it.</p>
-</li>
-<li>
-<p>Cons: Users cannot customise their own passwords.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Aspect:</strong> Where to save password</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Users remember the password themselves</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: As the password is not stored anywhere in the application, unauthorized personnel would not be able to reverse-engineer the application to obtain the password.</p>
-</li>
-<li>
-<p>Cons: User will have to inform the other party about the password themselves through some secured means.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Password saved in application</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Password is not lost every time the application is started up.</p>
-</li>
-<li>
-<p>Cons: Password could be reversed-engineered from the application, which defeats the purpose of encryption.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
+<p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -1190,7 +1045,7 @@ command.</p>
 <div class="content">
 <img src="images/EmailActivityDiagram.png" alt="EmailActivityDiagram" width="800">
 </div>
-<div class="title">Figure 21. Activity Diagram of Email feature</div>
+<div class="title">Figure 19. Activity Diagram of Email feature</div>
 </div>
 <div class="paragraph">
 <p>The email feature is constructed by 3 classes, <code>EmailLogin</code>, <code>EmailCompose</code>, <code>EmailSend</code>, which is handled by the <code>EmailManager</code>. More
@@ -1229,7 +1084,7 @@ the following criteria are not met:</p>
 <div class="content">
 <img src="images/EmailUMLDiagram.png" alt="EmailUMLDiagram" width="800">
 </div>
-<div class="title">Figure 22. Sequence Diagram of Email feature</div>
+<div class="title">Figure 20. Sequence Diagram of Email feature</div>
 </div>
 <div class="paragraph">
 <p>The following sequence diagram shows how each component within the <code>EmailManager</code> interacts when the email command
@@ -1239,7 +1094,7 @@ is entered by the user.</p>
 <div class="content">
 <img src="images/EmailSendUMLDiagram.png" alt="EmailSendUMLDiagram" width="800">
 </div>
-<div class="title">Figure 23. Sequence Diagram of Email feature</div>
+<div class="title">Figure 21. Sequence Diagram of Email feature</div>
 </div>
 <div class="paragraph">
 <p>The following diagram shows how the email draft tab in the MVP UI is updated when the <code>EventCenter</code> responds to the
@@ -1249,7 +1104,7 @@ is entered by the user.</p>
 <div class="content">
 <img src="images/EmailEventsDiagram.png" alt="EmailEventsDiagram" width="800">
 </div>
-<div class="title">Figure 24. Sequence Diagram of Email feature</div>
+<div class="title">Figure 22. Sequence Diagram of Email feature</div>
 </div>
 <div class="paragraph">
 <p><strong>Implementation of JavaMail API</strong></p>
@@ -1298,20 +1153,7 @@ code snippet below shows the set up (via SMTP) for sending out email.</p>
         InternetAddress recipientEmail = <span class="keyword">new</span> InternetAddress(message.getRecipient());
         newMessage.setRecipient(Message.RecipientType.TO, recipientEmail);
         newMessage.setSubject(message.getSubject());
-        <span class="keyword">if</span> (message.getRelativeFilePath().isEmpty()) {
-            newMessage.setText(message.getMessage());
-        } <span class="keyword">else</span> {
-            BodyPart messageBodyPart = <span class="keyword">new</span> MimeBodyPart();
-            messageBodyPart.setText(message.getMessage());
-            Multipart multipart = <span class="keyword">new</span> MimeMultipart();
-            multipart.addBodyPart(messageBodyPart);
-            messageBodyPart = <span class="keyword">new</span> MimeBodyPart();
-            <span class="predefined-type">DataSource</span> source = <span class="keyword">new</span> FileDataSource(message.getRelativeFilePath());
-            messageBodyPart.setDataHandler(<span class="keyword">new</span> DataHandler(source));
-            messageBodyPart.setFileName(message.getRelativeFilePath());
-            multipart.addBodyPart(messageBodyPart);
-            newMessage.setContent(multipart);
-        }
+        newMessage.setText(message.getMessage());
 
         Transport.send(newMessage);
     } <span class="keyword">catch</span> (AuthenticationFailedException e) {
@@ -1364,7 +1206,7 @@ code snippet below shows the set up (via SMTP) for sending out email.</p>
 <p>The user can find movies by <code>Category</code>, <code>MovieName</code> or <code>StartDate</code> or a combination of them as a multicriteria search.</p>
 </div>
 <div class="sect3">
-<h4 id="implementation-details-2"><a class="link" href="#implementation-details-2">4.6.1. Implementation details</a></h4>
+<h4 id="implementation-details"><a class="link" href="#implementation-details">4.6.1. Implementation details</a></h4>
 <div class="paragraph">
 <p>The parser will take in all arguments the user specified and store it in an array. If the user search by <code>MovieName</code> or
 <code>StartDate</code> or <code>Category</code>, MVP will retrieve movie records in the storage with the matching keywords. If two or more conditions
@@ -1387,11 +1229,11 @@ in <code>FindMovieCommand</code>.</p>
 <div class="content">
 <img src="images/FindMovieSequenceDiagram.PNG" alt="FindMovieSequenceDiagram" width="1000">
 </div>
-<div class="title">Figure 25. Sequence diagram of findmovie command</div>
+<div class="title">Figure 23. Sequence diagram of findmovie command</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="implementation-details-3"><a class="link" href="#implementation-details-3">4.6.3. Implementation details</a></h4>
+<h4 id="implementation-details-2"><a class="link" href="#implementation-details-2">4.6.3. Implementation details</a></h4>
 <div class="paragraph">
 <p>As seen in the sequence diagram above, MVP will do the following</p>
 </div>
@@ -1448,34 +1290,21 @@ The code snippet below shows when all parameters are chosen.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">4.6.4. Design considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">4.6.4. Design considerations</a></h4>
 <div class="paragraph">
-<p><strong>Aspects:</strong> Using <code>and</code> or <code>or</code> condition for the multicriteria search.</p>
+<p><strong>Aspects:</strong> Storage of movies used for search</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Using <code>and</code> condition for multicriteria search</p>
+<p><strong>Alternative 1 (current choice):</strong> Store in the same xml file as the MoviePlanner and read upon startup of program to an array.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: User will be able to make a more detailed search to display on MVP.</p>
+<p>Pros: Encryption will encrypt the <code>movieplanner.xml</code> so storing in the same file is more convenient.</p>
 </li>
 <li>
-<p>Cons: User cannot do a wider search with multiple keywords</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Using <code>or</code> condition for multicriteria search</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: User can search for multiple <code>tag</code> for example to find movies of those categories.</p>
-</li>
-<li>
-<p>Cons: User will not be able to make a detailed search to narrow down the results displayed on MVP.</p>
+<p>Cons: <code>movieplanner.xml</code> might be cluttered with data from cinemas and movies.</p>
 </li>
 </ul>
 </div>
@@ -1489,10 +1318,27 @@ The code snippet below shows when all parameters are chosen.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-A future update is planned in <code>V2.0</code> to support both <code>and</code> and <code>or</code> functions in the FindMovie command
+Since the <code>movieplanner.xml</code> file is going to be encrypted, data will already be obfuscated so readability is not a concern.
 </td>
 </tr>
 </table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 2:</strong> Store in a separate xml file and update whenever movies are being added or deleted.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easier for the user to look at if <code>movieplanner.xml</code> is in plaintext.</p>
+</li>
+<li>
+<p>Cons: Increases the number of files to be encrypted.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1503,7 +1349,7 @@ A future update is planned in <code>V2.0</code> to support both <code>and</code>
 The user can then use the <code>BrowserPanel</code> to view the cinema&#8217;s schedule.</p>
 </div>
 <div class="sect3">
-<h4 id="implementation-details-4"><a class="link" href="#implementation-details-4">4.7.1. Implementation details</a></h4>
+<h4 id="implementation-details-3"><a class="link" href="#implementation-details-3">4.7.1. Implementation details</a></h4>
 <div class="paragraph">
 <p>Addition and removal of screenings uses similar implementation. The sequence diagram below shows an overview
 of the high level interactions between components for the scenario when a <code>addscreening</code> command issued.</p>
@@ -1526,7 +1372,7 @@ for <code>addscreening</code> command.</p>
 <div class="content">
 <img src="images/AddScreeningSequenceDiagram.png" alt="AddScreeningSequenceDiagram" width="1000">
 </div>
-<div class="title">Figure 26. Sequence diagram of the interactions inside the Logic Component for <code>addscreening</code> command</div>
+<div class="title">Figure 24. Sequence diagram of the interactions inside the Logic Component for <code>addscreening</code> command</div>
 </div>
 <div class="paragraph">
 <p>As seen in the sequence diagram above, MVP will do the following to execute the <code>addscreening</code> command</p>
@@ -1634,7 +1480,7 @@ and the relationship between <code>XMLAdaptedCinema</code>, <code>XMLAdaptedThea
 <div class="content">
 <img src="images/ScreeningStorageComponent.png" alt="ScreeningStorageComponent" width="500">
 </div>
-<div class="title">Figure 27. Class diagram of storage component</div>
+<div class="title">Figure 25. Class diagram of storage component</div>
 </div>
 <div class="paragraph">
 <p>The data will be stored as such in the movieplanner.xml file:</p>
@@ -1670,7 +1516,7 @@ and the relationship between <code>XMLAdaptedCinema</code>, <code>XMLAdaptedThea
 <div class="sect4">
 <h5 id="reading-screenings-from-code-movieplanner-xml-code"><a class="link" href="#reading-screenings-from-code-movieplanner-xml-code">Reading screenings from <code>movieplanner.xml</code></a></h5>
 <div class="paragraph">
-<p>As shown in <a href="#screening_storage">Figure 27, &#8220;Class diagram of storage component&#8221;</a>, it shows the relationship between <code>XMLAdaptedCinema</code>, <code>XMLAdaptedTheater</code> and <code>XMLAdaptedScreening</code>.</p>
+<p>As shown in <a href="#screening_storage">Figure 25, &#8220;Class diagram of storage component&#8221;</a>, it shows the relationship between <code>XMLAdaptedCinema</code>, <code>XMLAdaptedTheater</code> and <code>XMLAdaptedScreening</code>.</p>
 </div>
 <div class="paragraph">
 <p>The following steps show how MVP extracts the list of cinemas and converts the <code>XMLAdaptedScreening</code> back into
@@ -1782,7 +1628,7 @@ As seen in the diagram below, the <code>BrowserPanel</code> shows the schedule o
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>BrowserPanel</code> subscribes to the <code>ReloadBrowserPanel</code> and will load all the schedules of the cinema in MVP.
+<code>BrowserPanel</code> subscribes to the <code>MoviePlannerChangedEvent</code> and will load all the schedules of the cinemas in MVP.
 </td>
 </tr>
 </table>
@@ -1790,7 +1636,7 @@ As seen in the diagram below, the <code>BrowserPanel</code> shows the schedule o
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">4.7.2. Design Considerations</a></h4>
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">4.7.2. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Aspect:</strong> Displaying cinema theater&#8217;s schedule</p>
 </div>
@@ -1862,24 +1708,13 @@ As seen in the diagram below, the <code>BrowserPanel</code> shows the schedule o
 <div class="sect2">
 <h3 id="add-delete-theater"><a class="link" href="#add-delete-theater">4.8. Add/Delete Theater</a></h3>
 <div class="paragraph">
-<p>When creating a new <code>Cinema</code>, the initial number of theaters must be stated. This value will be used to create a corresponding number of <code>Theater</code>, which is stored as an ArrayList&lt;Theater&gt; in <code>Cinema</code>.</p>
-</div>
-<div class="sect3">
-<h4 id="implementation-details-5"><a class="link" href="#implementation-details-5">4.8.1. Implementation details</a></h4>
-<div class="paragraph">
-<p><strong>Add Theater Command</strong></p>
-</div>
-<div class="paragraph">
-<p>When there is a need to resize the <code>Cinema</code>, the user can use <code>addTheater</code> and <code>deleteTheater</code> commands to increase/decrease the number of theaters respectively.</p>
-</div>
-<div class="paragraph">
-<p>The following sequence diagram shows the interactions inside the Logic Component for <code>addTheater</code> command.</p>
+<p>When creating a new <code>Cinema</code>, the number of theaters must be stated. <code>Theater</code> is then created and stored as an ArrayList&lt;Theater&gt; in <code>Cinema</code>. <code>addTheater</code> and <code>deleteTheater</code> are used to increase/decrease the size of the ArrayList respectively. The following sequence diagram shows how the <code>addTheater</code> command works.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/AddTheaterSequenceDiagram.png" alt="AddTheaterSequenceDiagram" width="1000">
 </div>
-<div class="title">Figure 28. Sequence diagram of addTheater Command</div>
+<div class="title">Figure 26. Sequence diagram of addTheater Command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1888,11 +1723,13 @@ As seen in the diagram below, the <code>BrowserPanel</code> shows the schedule o
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>deleteTheater</code> follows the same flow as the diagram shown above, but uses <code>DeleteTheaterCommand</code> and <code>DeleteTheaterCommandParser</code> instead.
+<code>deleteTheater</code> follows the same flow as the above diagram, but uses <code>DeleteTheaterCommand</code> and <code>DeleteTheaterCommandParser</code> instead.
 </td>
 </tr>
 </table>
 </div>
+<div class="sect3">
+<h4 id="implementation-details-4"><a class="link" href="#implementation-details-4">4.8.1. Implementation details</a></h4>
 <div class="paragraph">
 <p>The addition and deletion of <code>Theater</code> in <code>Cinema</code> are facilitated by <code>addTheater</code> and <code>deleteTheater</code> commands. When executing these commands, MVP will do the following</p>
 </div>
@@ -1908,13 +1745,7 @@ As seen in the diagram below, the <code>BrowserPanel</code> shows the schedule o
 <p>Creates a <code>AddTheaterCommand</code> object to take in the <code>parameters</code>. Checks are present in <code>AddTheaterCommand</code> to ensure values provided by user is valid.</p>
 </li>
 <li>
-<p><code>AddTheaterCommand</code> then returns a <code>Command</code> object to the <code>LogicManager</code> for it to execute.</p>
-</li>
-<li>
-<p>The <code>LogicManager</code> will then create the newly resized cinema and update the <code>Model</code>.</p>
-</li>
-<li>
-<p>Upon success, the result of this execution will then be returned as a <code>CommandResult</code> object back to the UI.</p>
+<p><code>AddTheaterCommand</code> then returns <code>CommandResult</code> to the user which shows the current status of the <code>Cinema</code>.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2032,7 +1863,7 @@ Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows y
 <div class="content">
 <img src="images/chrome_save_as_pdf.png" alt="chrome save as pdf" width="300">
 </div>
-<div class="title">Figure 29. Saving documentation as PDF files in Chrome</div>
+<div class="title">Figure 27. Saving documentation as PDF files in Chrome</div>
 </div>
 <div class="paragraph">
 <p><a href="#">Back to top</a></p>
@@ -3526,7 +3357,7 @@ Expected: Similar to previous.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-04 01:15:29 UTC
+Last updated 2018-04-04 01:13:24 UTC
 </div>
 </div>
 </body>

@@ -47,14 +47,13 @@
 <li><a href="#finding-movies-by-user-input-code-findmovie-code">4.16. Finding movies by user input: <code>findmovie</code></a></li>
 <li><a href="#listing-history-of-entered-commands-code-history-code-code-hist-code">4.17. Listing history of entered commands : <code>history</code> | <code>hist</code></a></li>
 <li><a href="#jump-to-a-specified-date-code-jump-code-code-j-code">4.18. Jump to a specified date : <code>jump</code> | <code>j</code></a></li>
-<li><a href="#listing-all-cinemas-and-movies-code-list-code-code-l-code">4.19. Listing all cinemas and movies : <code>list</code> | <code>l</code></a></li>
+<li><a href="#listing-all-cinemas-code-list-code-code-l-code">4.19. Listing all cinemas : <code>list</code> | <code>l</code></a></li>
 <li><a href="#redoing-the-previously-undone-command-code-redo-code-code-r-code">4.20. Redoing the previously undone command : <code>redo</code> | <code>r</code></a></li>
 <li><a href="#selecting-a-cinema-code-select-code-code-s-code">4.21. Selecting a cinema : <code>select</code> | <code>s</code></a></li>
 <li><a href="#undoing-previous-command-code-undo-code-code-u-code">4.22. Undoing previous command : <code>undo</code> | <code>u</code></a></li>
 <li><a href="#exiting-the-program-code-exit-code">4.23. Exiting the program : <code>exit</code></a></li>
 <li><a href="#saving-the-data">4.24. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-encrypt-code-code-enc-code">4.25. Encrypting data files : <code>encrypt</code> | <code>enc</code></a></li>
-<li><a href="#decrypting-encrypted-data-files-code-decrypt-code-code-dec-code">4.26. Decrypting encrypted data files : <code>decrypt</code> | <code>dec</code></a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">4.25. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">5. FAQ</a></li>
@@ -195,7 +194,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p>Format: <code>help</code></p>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">help</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background blue">help</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -224,7 +223,7 @@ Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS th/NUMBER_OF_THEATER</
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">add</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background green">add</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -250,7 +249,7 @@ Format: <code>addmovie n/MOVIE_NAME d/DURATION r/RATING sd/START_DATE t/TAG</cod
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">addmovie</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background green">addmovie</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -314,7 +313,7 @@ Adds a screening of the 2nd movie to the 3rd cinema&#8217;s 3rd theater.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">addscreening</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background green">addscreening</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -355,7 +354,7 @@ Number of theater must be positive
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">addtheater</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background green">addtheater</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -368,7 +367,7 @@ Number of theater must be positive
 Format: <code>clear</code></p>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">clear</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background red">clear</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -420,7 +419,7 @@ Cathay East&#8217;s theater 1.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">copy</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background green">copy</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -467,7 +466,7 @@ Deletes the 1st cinema in the results of the <code>find</code> command.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">delete</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background red">delete</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -524,20 +523,20 @@ Deletes the 1st movie in the results of the <code>find</code> command.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">deletemovie</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background red">deletemovie</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="deleting-a-screening-code-deletescreening-code-code-ds-code"><a class="link" href="#deleting-a-screening-code-deletescreening-code-code-ds-code">4.10. Deleting a screening: <code>deletescreening</code> | <code>ds</code></a></h3>
 <div class="paragraph">
-<p><code>Available in v1.4</code></p>
+<p><code>Coming in v1.4</code></p>
 </div>
 <div class="paragraph">
 <p>Alias: <code>ds</code></p>
 </div>
 <div class="paragraph">
-<p>Delete a screening from a cinema theater using the screening&#8217;s start date and time.<br>
-Format: <code>deletescreening c/CINEMA_INDEX th/THEATER h/SCREEN_DATE_TIME</code></p>
+<p>Delete a screening of a movie from a cinema theater.<br>
+Format: <code>deletescreening m/MOVIE_INDEX c/CINEMA_INDEX th/THEATER h/SCREEN_DATE_TIME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -545,12 +544,12 @@ Format: <code>deletescreening c/CINEMA_INDEX th/THEATER h/SCREEN_DATE_TIME</code
 <div class="ulist">
 <ul>
 <li>
-<p><code>deletescreening c/2 th/1 h/05/05/2015 13:30</code><br>
-Deletes a screening which screens on 05/05/2015 from the 2nd cinema&#8217;s 1st theater.</p>
+<p><code>deletescreening m/1 c/2 th/1 h/05/05/2015 13:30</code><br>
+Deletes a screening of the 1st movie to the 2nd cinema&#8217;s 1st theater.</p>
 </li>
 <li>
 <p><code>ds m/2 c/3 th/3 h/11/11/2011 14:15</code><br>
-Deletes a screening which screens on 11/11/2011 from the 3rd cinema&#8217;s 3rd theater.</p>
+Deletes a screening of the 2nd movie to the 3rd cinema&#8217;s 3rd theater.</p>
 </li>
 </ul>
 </div>
@@ -573,6 +572,9 @@ Deletes a screening which screens on 11/11/2011 from the 3rd cinema&#8217;s 3rd 
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
+<p>The movie that is being deleted from screening must already exist in the MVP</p>
+</li>
+<li>
 <p>The cinema theater that is holding the screening must exist in the MVP</p>
 </li>
 </ul>
@@ -582,7 +584,7 @@ Deletes a screening which screens on 11/11/2011 from the 3rd cinema&#8217;s 3rd 
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">deletescreening</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background red">deletescreening</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -623,7 +625,7 @@ Number of theater must be positive
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">deletetheater</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background red">deletetheater</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -675,7 +677,7 @@ Edits the name of the 2nd cinema to be <code>Golden Village</code>.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">edit</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background white">edit</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -730,7 +732,7 @@ Edits the name of the 2nd movie to be <code>Spiderman 2</code>.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">editmovie</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background">editmovie</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -740,7 +742,7 @@ Edits the name of the 2nd movie to be <code>Spiderman 2</code>.</p>
 </div>
 <div class="paragraph">
 <p>Sends an email to target recipient.<br>
-Format: <code>email msg/MESSAGE subj/SUBJECT recp/RECIPIENT func/&lt;SEND|CLEAR&gt; lgn/EMAIL_USERNAME:EMAIL_PASSWORD [attc/RELATIVE_FILE_PATH]</code></p>
+Format: <code>email [msg/MESSAGE] [subj/SUBJECT] [recp/RECIPIENT] [func/&lt;send|clear&gt;] [lgn/user@gmail.com:PASSWORD]</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -785,7 +787,7 @@ Format: <code>email msg/MESSAGE subj/SUBJECT recp/RECIPIENT func/&lt;SEND|CLEAR&
 <div class="ulist">
 <ul>
 <li>
-<p><code>email msg/Hi Bob, Here is the schedule. subj/Schedule lgn/cmanager@gmail.com:1I2h@la recp/gv.manager@gmail.com attc/docs/images/Architecture.png func/send</code><br>
+<p><code>email msg/Hi Bob, Here is the schedule. subj/Schedule lgn/cmanager@gmail.com:1I2h@la recp/gv.manager@gmail.com func/send</code><br>
 Sends out an email to <code>gv.manager@gmail.com</code> with a message of the following details:</p>
 <div class="ulist">
 <ul>
@@ -798,9 +800,6 @@ Sends out an email to <code>gv.manager@gmail.com</code> with a message of the fo
 <li>
 <p>Message: <code>Hi Bob, Here is the schedule.</code></p>
 </li>
-<li>
-<p>Attachment: <code>Architecture.png</code></p>
-</li>
 </ul>
 </div>
 </li>
@@ -811,7 +810,7 @@ Edits the email message with <code>This will be a very long message, so I hope t
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">email</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background">email</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -862,7 +861,7 @@ Returns any cinema having names <code>Golden</code>, <code>Village</code>, or <c
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">find</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background blue">find</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -915,7 +914,7 @@ Returns all movies from tag <code>superhero</code> with name <code>Spiderman</co
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">findmovie</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background blue">findmovie</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -942,7 +941,7 @@ Format: <code>history</code></p>
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">history</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background">history</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -983,20 +982,20 @@ You will be able to see the schedule of 28/03/2018</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">jump</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background">history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-cinemas-and-movies-code-list-code-code-l-code"><a class="link" href="#listing-all-cinemas-and-movies-code-list-code-code-l-code">4.19. Listing all cinemas and movies : <code>list</code> | <code>l</code></a></h3>
+<h3 id="listing-all-cinemas-code-list-code-code-l-code"><a class="link" href="#listing-all-cinemas-code-list-code-code-l-code">4.19. Listing all cinemas : <code>list</code> | <code>l</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>l</code></p>
 </div>
 <div class="paragraph">
-<p>Shows a list of all cinemas and movies in MVP.<br>
+<p>Shows a list of all cinemas in MVP.<br>
 Format: <code>list</code></p>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">list</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background yellow">list</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -1034,7 +1033,7 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">redo</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background red">redo</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -1081,7 +1080,7 @@ Selects the 1st cinema in the results of the <code>find</code> command.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">select</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background">select</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -1132,7 +1131,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">undo</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background red">undo</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -1142,7 +1141,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 Format: <code>exit</code></p>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="purple-background white">exit</code></p>
+<p>Keyword appearance on Command Line: <code class="black-background red">exit</code></p>
 </div>
 </div>
 <div class="sect2">
@@ -1153,77 +1152,9 @@ There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-encrypt-code-code-enc-code"><a class="link" href="#encrypting-data-files-code-encrypt-code-code-enc-code">4.25. Encrypting data files : <code>encrypt</code> | <code>enc</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">4.25. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
-<p><code>Available in v1.4</code></p>
-</div>
-<div class="paragraph">
-<p>Alias: <code>enc</code></p>
-</div>
-<div class="paragraph">
-<p>Encrypts the <code>movieplanner.xml</code> using password provided by user.</p>
-</div>
-<div class="paragraph">
-<p>Format: <code>encrypt pw/PASSWORD</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>A <code>encryptedmovieplanner.xml</code> file is created/overwritten, upon the <code>encrypt</code> command.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>encrypt pw/password</code><br>
-You will be able to encrypt the <code>movieplanner.xml</code> and create a <code>encryptedmovieplanner.xml</code> using this password.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="decrypting-encrypted-data-files-code-decrypt-code-code-dec-code"><a class="link" href="#decrypting-encrypted-data-files-code-decrypt-code-code-dec-code">4.26. Decrypting encrypted data files : <code>decrypt</code> | <code>dec</code></a></h3>
-<div class="paragraph">
-<p><code>Available in v1.4</code></p>
-</div>
-<div class="paragraph">
-<p>Alias: <code>dec</code></p>
-</div>
-<div class="paragraph">
-<p>Decrypts the <code>encryptedmovieplanner.xml</code> using password provided by user.</p>
-</div>
-<div class="paragraph">
-<p>Format: <code>decrypt pw/PASSWORD</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>A <code>movieplanner.xml</code> file is created/overwritten upon successful <code>decrypt</code> command. You will be prompt to restart the application to see changes.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>decrypt pw/password</code><br>
-You will be able to decrypt the <code>encryptedmovieplanner.xml</code> and obtain a <code>movieplanner.xml</code> if the password is the same as the one used for encryption.</p>
-</li>
-</ul>
+<p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
 <div class="paragraph">
 <p><a href="#">Back to top</a></p>
@@ -1311,9 +1242,9 @@ You will be able to decrypt the <code>encryptedmovieplanner.xml</code> and obtai
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DeleteScreening</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletescreening c/CINEMA_INDEX th/THEATER h/SCREEN_DATE_TIME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletescreening m/MOVIE_INDEX c/CINEMA_INDEX th/THEATER h/SCREEN_DATE_TIME</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ds</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletescreening c/2 th/1 h/05/05/2015 13:30</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletescreening m/1 c/2 th/1 h/05/05/2015 13:30</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DeleteTheater</strong></p></td>
@@ -1462,7 +1393,7 @@ visual indicators.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-04 01:15:29 UTC
+Last updated 2018-04-04 01:13:24 UTC
 </div>
 </div>
 </body>
