@@ -29,31 +29,51 @@
 <li><a href="#quick-start">3. Quick Start</a></li>
 <li><a href="#Features">4. Features</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code-code-h-code">4.1. Viewing help : <code>help</code> | <code>h</code></a></li>
-<li><a href="#adding-a-cinema-code-add-code-code-a-code">4.2. Adding a cinema: <code>add</code> | <code>a</code></a></li>
-<li><a href="#adding-a-movie-code-addmovie-code-code-am-code">4.3. Adding a movie: <code>addmovie</code> | <code>am</code></a></li>
-<li><a href="#adding-a-movie-screening-code-addscreening-code-code-as-code">4.4. Adding a movie screening: <code>addscreening</code> | <code>as</code></a></li>
-<li><a href="#adding-theaters-code-addtheater-code-code-at-code">4.5. Adding theaters: <code>addtheater</code> | <code>at</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code-code-c-code">4.6. Clearing all entries : <code>clear</code> | <code>c</code></a></li>
-<li><a href="#copying-schedule-code-copy-code-code-cp-code">4.7. Copying schedule: <code>copy</code> | <code>cp</code></a></li>
-<li><a href="#deleting-a-cinema-code-delete-code-code-d-code">4.8. Deleting a cinema : <code>delete</code> | <code>d</code></a></li>
-<li><a href="#deleting-a-movie-code-deletemovie-code-code-dm-code">4.9. Deleting a movie : <code>deletemovie</code> | <code>dm</code></a></li>
-<li><a href="#deleting-a-screening-code-deletescreening-code-code-ds-code">4.10. Deleting a screening: <code>deletescreening</code> | <code>ds</code></a></li>
-<li><a href="#deleting-theaters-code-deletetheater-code-code-dt-code">4.11. Deleting theaters: <code>deletetheater</code> | <code>dt</code></a></li>
-<li><a href="#editing-a-cinema-code-edit-code-code-e-code">4.12. Editing a cinema: <code>edit</code> | <code>e</code></a></li>
-<li><a href="#editing-a-movie-code-editmovie-code-code-em-code">4.13. Editing a movie : <code>editmovie</code> | <code>em</code></a></li>
-<li><a href="#email-schedule-code-email-code-code-eml-code">4.14. Email schedule: <code>email</code> | <code>eml</code></a></li>
-<li><a href="#finding-cinemas-by-name-code-find-code-code-f-code">4.15. Finding cinemas by name: <code>find</code> | <code>f</code></a></li>
-<li><a href="#finding-movies-by-user-input-code-findmovie-code">4.16. Finding movies by user input: <code>findmovie</code></a></li>
-<li><a href="#listing-history-of-entered-commands-code-history-code-code-hist-code">4.17. Listing history of entered commands : <code>history</code> | <code>hist</code></a></li>
-<li><a href="#jump-to-a-specified-date-code-jump-code-code-j-code">4.18. Jump to a specified date : <code>jump</code> | <code>j</code></a></li>
-<li><a href="#listing-all-cinemas-code-list-code-code-l-code">4.19. Listing all cinemas : <code>list</code> | <code>l</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code-code-r-code">4.20. Redoing the previously undone command : <code>redo</code> | <code>r</code></a></li>
-<li><a href="#selecting-a-cinema-code-select-code-code-s-code">4.21. Selecting a cinema : <code>select</code> | <code>s</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code-code-u-code">4.22. Undoing previous command : <code>undo</code> | <code>u</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">4.23. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">4.24. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">4.25. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#cinema-related-commands">4.1. Cinema related commands</a>
+<ul class="sectlevel3">
+<li><a href="#adding-a-cinema-code-add-code-code-a-code">4.1.1. Adding a cinema: <code>add</code> | <code>a</code></a></li>
+<li><a href="#editing-a-cinema-code-edit-code-code-e-code">4.1.2. Editing a cinema: <code>edit</code> | <code>e</code></a></li>
+<li><a href="#deleting-a-cinema-code-delete-code-code-d-code">4.1.3. Deleting a cinema : <code>delete</code> | <code>d</code></a></li>
+<li><a href="#finding-cinemas-by-name-code-find-code-code-f-code">4.1.4. Finding cinemas by name: <code>find</code> | <code>f</code></a></li>
+<li><a href="#selecting-a-cinema-code-select-code-code-s-code">4.1.5. Selecting a cinema : <code>select</code> | <code>s</code></a></li>
+<li><a href="#adding-theaters-code-addtheater-code-code-at-code">4.1.6. Adding theaters: <code>addtheater</code> | <code>at</code></a></li>
+<li><a href="#deleting-theaters-code-deletetheater-code-code-dt-code">4.1.7. Deleting theaters: <code>deletetheater</code> | <code>dt</code></a></li>
+<li><a href="#copying-schedule-code-copy-code-code-cp-code">4.1.8. Copying schedule: <code>copy</code> | <code>cp</code></a></li>
+</ul>
+</li>
+<li><a href="#movie-related-commands">4.2. Movie related commands</a>
+<ul class="sectlevel3">
+<li><a href="#adding-a-movie-code-addmovie-code-code-am-code">4.2.1. Adding a movie: <code>addmovie</code> | <code>am</code></a></li>
+<li><a href="#deleting-a-movie-code-deletemovie-code-code-dm-code">4.2.2. Deleting a movie : <code>deletemovie</code> | <code>dm</code></a></li>
+<li><a href="#finding-movies-by-user-input-code-findmovie-code">4.2.3. Finding movies by user input: <code>findmovie</code></a></li>
+<li><a href="#adding-a-movie-screening-code-addscreening-code-code-as-code">4.2.4. Adding a movie screening: <code>addscreening</code> | <code>as</code></a></li>
+<li><a href="#deleting-a-screening-code-deletescreening-code-code-ds-code">4.2.5. Deleting a screening: <code>deletescreening</code> | <code>ds</code></a></li>
+</ul>
+</li>
+<li><a href="#email-related-commands">4.3. Email related commands</a>
+<ul class="sectlevel3">
+<li><a href="#emailing-schedule-code-email-code-code-eml-code">4.3.1. Emailing schedule: <code>email</code> | <code>eml</code></a></li>
+</ul>
+</li>
+<li><a href="#security-related-commands">4.4. Security related commands</a>
+<ul class="sectlevel3">
+<li><a href="#encrypting-data-files-code-encrypt-code-code-enc-code">4.4.1. Encrypting data files : <code>encrypt</code> | <code>enc</code></a></li>
+<li><a href="#decrypting-encrypted-data-files-code-decrypt-code-code-dec-code">4.4.2. Decrypting encrypted data files : <code>decrypt</code> | <code>dec</code></a></li>
+</ul>
+</li>
+<li><a href="#miscellaneous-commands">4.5. Miscellaneous commands</a>
+<ul class="sectlevel3">
+<li><a href="#viewing-help-code-help-code-code-h-code">4.5.1. Viewing help : <code>help</code> | <code>h</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code-code-c-code">4.5.2. Clearing all entries : <code>clear</code> | <code>c</code></a></li>
+<li><a href="#listing-history-of-entered-commands-code-history-code-code-hist-code">4.5.3. Listing history of entered commands : <code>history</code> | <code>hist</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code-code-r-code">4.5.4. Redoing the previously undone command : <code>redo</code> | <code>r</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code-code-u-code">4.5.5. Undoing previous command : <code>undo</code> | <code>u</code></a></li>
+<li><a href="#jumping-to-a-specified-date-code-jump-code-code-j-code">4.5.6. Jumping to a specified date : <code>jump</code> | <code>j</code></a></li>
+<li><a href="#listing-all-cinemas-and-movies-code-list-code-code-l-code">4.5.7. Listing all cinemas and movies : <code>list</code> | <code>l</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">4.5.8. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">4.5.9. Saving the data</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#faq">5. FAQ</a></li>
@@ -132,7 +152,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all cinemas</p>
+<p><strong><code>list</code></strong> : lists all cinemas and movies</p>
 </li>
 <li>
 <p><strong><code>add</code></strong><code>n/GV Paya Lebar p/66538100 e/customersvc@goldenvillage.com.sg a/SingPost Centre, 10 Eunos Road 8, #03-107, Singapore 408600 th/8</code> : adds a cinema named <code>GV Paya Lebar</code> to MVP.</p>
@@ -186,19 +206,17 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="viewing-help-code-help-code-code-h-code"><a class="link" href="#viewing-help-code-help-code-code-h-code">4.1. Viewing help : <code>help</code> | <code>h</code></a></h3>
+<h3 id="cinema-related-commands"><a class="link" href="#cinema-related-commands">4.1. Cinema related commands</a></h3>
+<div class="sect3">
+<h4 id="adding-a-cinema-code-add-code-code-a-code"><a class="link" href="#adding-a-cinema-code-add-code-code-a-code">4.1.1. Adding a cinema: <code>add</code> | <code>a</code></a></h4>
 <div class="paragraph">
-<p>Alias: <code>h</code></p>
+<p><code>Available in v1.0</code></p>
 </div>
-<div class="paragraph">
-<p>Format: <code>help</code></p>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background blue">help</code></p>
+<div class="imageblock">
+<div class="content">
+<img src="images/addCinema.gif" alt="addCinema" width="800">
 </div>
 </div>
-<div class="sect2">
-<h3 id="adding-a-cinema-code-add-code-code-a-code"><a class="link" href="#adding-a-cinema-code-add-code-code-a-code">4.2. Adding a cinema: <code>add</code> | <code>a</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>a</code></p>
 </div>
@@ -223,11 +241,395 @@ Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS th/NUMBER_OF_THEATER</
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background green">add</code></p>
+<p>Keyword appearance on Command Line: <code class="purple-background white">add</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="editing-a-cinema-code-edit-code-code-e-code"><a class="link" href="#editing-a-cinema-code-edit-code-code-e-code">4.1.2. Editing a cinema: <code>edit</code> | <code>e</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.0</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/editCinema.gif" alt="editCinema" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Alias: <code>e</code></p>
+</div>
+<div class="paragraph">
+<p>Edits an existing cinema in MVP.<br>
+Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS]</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Edits the cinema at the specified <code>INDEX</code>. The index refers to the index number shown in the last cinema listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li>
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li>
+<p>Existing values will be updated to the input values.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>edit 1 p/67124231 e/shaw@yahoo.com</code><br>
+Edits the phone number and email address of the 1st cinema to be <code>91234567</code> and <code>shaw@yahoo.com</code> respectively.</p>
+</li>
+<li>
+<p><code>e 2 n/Golden Village</code><br>
+Edits the name of the 2nd cinema to be <code>Golden Village</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">edit</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-a-cinema-code-delete-code-code-d-code"><a class="link" href="#deleting-a-cinema-code-delete-code-code-d-code">4.1.3. Deleting a cinema : <code>delete</code> | <code>d</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.0</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/deleteCinema.gif" alt="deleteCinema" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Alias: <code>d</code></p>
+</div>
+<div class="paragraph">
+<p>Deletes the specified cinema from MVP.<br>
+Format: <code>delete INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the cinema at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the most recent listing.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>delete 2</code><br>
+Deletes the 2nd cinema in MVP.</p>
+</li>
+<li>
+<p><code>find Cathay</code><br>
+<code>d 1</code><br>
+Deletes the 1st cinema in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">delete</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-cinemas-by-name-code-find-code-code-f-code"><a class="link" href="#finding-cinemas-by-name-code-find-code-code-f-code">4.1.4. Finding cinemas by name: <code>find</code> | <code>f</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.0</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/findCinema.gif" alt="findCinema" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Alias: <code>f</code></p>
+</div>
+<div class="paragraph">
+<p>Finds cinemas whose names contain any of the given keywords.<br>
+Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The search is case insensitive. e.g <code>cathay</code> will match <code>Cathay</code></p>
+</li>
+<li>
+<p>The order of the keywords does not matter. e.g. <code>Cathay West</code> will match <code>West Cathay</code></p>
+</li>
+<li>
+<p>Only the cinema is searched.</p>
+</li>
+<li>
+<p>Only full words will be matched e.g. <code>Cathay</code> will not match <code>Cathays</code></p>
+</li>
+<li>
+<p>Cinemas matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Cathay West</code> will return <code>Cathay East</code>, <code>West Village</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>find Cathay</code><br>
+Returns <code>cathay</code> and <code>Cathay West</code></p>
+</li>
+<li>
+<p><code>f Golden Village North</code><br>
+Returns any cinema having names <code>Golden</code>, <code>Village</code>, or <code>North</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">find</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="selecting-a-cinema-code-select-code-code-s-code"><a class="link" href="#selecting-a-cinema-code-select-code-code-s-code">4.1.5. Selecting a cinema : <code>select</code> | <code>s</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.0</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/selectCinema.gif" alt="selectCinema" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Alias: <code>s</code></p>
+</div>
+<div class="paragraph">
+<p>Selects the cinema identified by the index number used in the last cinema listing.<br>
+Format: <code>select INDEX</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Selects the cinema and loads all the theaters with their schedules at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the most recent listing.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>select 2</code><br>
+Selects the 2nd cinema in MVP.</p>
+</li>
+<li>
+<p><code>find Cathay</code><br>
+<code>s 1</code><br>
+Selects the 1st cinema in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">select</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="adding-theaters-code-addtheater-code-code-at-code"><a class="link" href="#adding-theaters-code-addtheater-code-code-at-code">4.1.6. Adding theaters: <code>addtheater</code> | <code>at</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.2</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/addTheater.gif" alt="addTheater" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Alias: <code>at</code></p>
+</div>
+<div class="paragraph">
+<p>Adds theaters to a cinema.<br>
+Format: <code>addtheater CINEMA_INDEX th/NUMBER_OF_THEATER</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>addtheater 2 th/2</code></p>
+</li>
+<li>
+<p><code>at 1 th/5</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Number of theater must be positive
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">addtheater</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deleting-theaters-code-deletetheater-code-code-dt-code"><a class="link" href="#deleting-theaters-code-deletetheater-code-code-dt-code">4.1.7. Deleting theaters: <code>deletetheater</code> | <code>dt</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.2</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/deleteTheater.gif" alt="deleteTheater" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Alias: <code>dt</code></p>
+</div>
+<div class="paragraph">
+<p>Delete theaters from a cinema.<br>
+Format: <code>deletetheater CINEMA_INDEX th/NUMBER_OF_THEATER</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>deletetheater 2 th/9</code></p>
+</li>
+<li>
+<p><code>dt 1 th/2</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Number of theater must be positive
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">deletetheater</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="copying-schedule-code-copy-code-code-cp-code"><a class="link" href="#copying-schedule-code-copy-code-code-cp-code">4.1.8. Copying schedule: <code>copy</code> | <code>cp</code></a></h4>
+<div class="paragraph">
+<p><code>Coming in v2.0</code></p>
+</div>
+<div class="paragraph">
+<p>Alias: <code>cp</code></p>
+</div>
+<div class="paragraph">
+<p>Copies a theater schedule to a target theater schedule
+Format: <code>copy c/CINEMA th/THEATER sd/SOURCE_DATE tc/TARGET_CINEMA tth/TARGET_THEATER td/TARGET_DATE</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>copy c/Cathay th/1 sd/14/03/2018 tc/Cathay tth/1 td/15/03/2018</code></p>
+</li>
+<li>
+<p><code>cp c/Cathay Central th/1 sd/14/03/2018 tc/Cathay East tth/1 td/14/03/2018</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>In the first example, you copy the schedule of Cathay&#8217;s theater 1 on 14/03/2018 to the
+next day 15/03/2018.</p>
+</li>
+<li>
+<p>In the second example, you copy the schedule of Cathay Central&#8217;s theater 1 to the schedule of
+Cathay East&#8217;s theater 1.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">copy</code></p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-movie-code-addmovie-code-code-am-code"><a class="link" href="#adding-a-movie-code-addmovie-code-code-am-code">4.3. Adding a movie: <code>addmovie</code> | <code>am</code></a></h3>
+<h3 id="movie-related-commands"><a class="link" href="#movie-related-commands">4.2. Movie related commands</a></h3>
+<div class="sect3">
+<h4 id="adding-a-movie-code-addmovie-code-code-am-code"><a class="link" href="#adding-a-movie-code-addmovie-code-code-am-code">4.2.1. Adding a movie: <code>addmovie</code> | <code>am</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.2</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/addMovie.gif" alt="addMovie" width="800">
+</div>
+</div>
 <div class="paragraph">
 <p>Alias: <code>am</code></p>
 </div>
@@ -249,13 +651,138 @@ Format: <code>addmovie n/MOVIE_NAME d/DURATION r/RATING sd/START_DATE t/TAG</cod
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background green">addmovie</code></p>
+<p>Keyword appearance on Command Line: <code class="purple-background white">addmovie</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="adding-a-movie-screening-code-addscreening-code-code-as-code"><a class="link" href="#adding-a-movie-screening-code-addscreening-code-code-as-code">4.4. Adding a movie screening: <code>addscreening</code> | <code>as</code></a></h3>
+<div class="sect3">
+<h4 id="deleting-a-movie-code-deletemovie-code-code-dm-code"><a class="link" href="#deleting-a-movie-code-deletemovie-code-code-dm-code">4.2.2. Deleting a movie : <code>deletemovie</code> | <code>dm</code></a></h4>
+<div class="paragraph">
+<p><code>Available in V1.2</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/deleteMovie.gif" alt="deleteMovie" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Alias: <code>dm</code></p>
+</div>
+<div class="paragraph">
+<p>Deletes the specified movie from MVP.<br>
+Format: <code>delete INDEX</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the movie at the specified <code>INDEX</code>.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the most recent listing.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>delete 2</code><br>
+Deletes the 2nd movie in MVP.</p>
+</li>
+<li>
+<p><code>find Marvel</code><br>
+<code>dm 1</code><br>
+Deletes the 1st movie in the results of the <code>find</code> command.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">deletemovie</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="finding-movies-by-user-input-code-findmovie-code"><a class="link" href="#finding-movies-by-user-input-code-findmovie-code">4.2.3. Finding movies by user input: <code>findmovie</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.3</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/findMovie.gif" alt="findMovie" width="800">
+</div>
+</div>
+<div class="paragraph">
+<p>Alias: <code>fm</code></p>
+</div>
+<div class="paragraph">
+<p>Finds movies based on the name, tag or start date.<br>
+Format: <code>findmovie [n/MOVIE_NAME] [t/TAG] [sd/START_DATE]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The order of the keywords does not matter. e.g. <code>Cathay West</code> will match <code>West Cathay</code></p>
+</li>
+<li>
+<p>Only the movie is searched.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findmovie n/zombie</code><br>
+Returns all movies which name contains keyword <code>zombie</code> like <code>Zombie Graveyard</code> and <code>attack the zombie</code></p>
+</li>
+<li>
+<p><code>fm t/horror</code><br>
+Returns all movies which belongs to the tag <code>horror</code> like <code>Insidious</code> and <code>Conjuring</code></p>
+</li>
+<li>
+<p><code>findmovie sd/02/02/2018</code><br>
+Returns all movies with <code>StartDate = 09/11/2017</code> like <code>Ah Boys to Men 4</code></p>
+</li>
+<li>
+<p><code>findmovie n/Spiderman t/superhero</code><br>
+Returns all movies from tag <code>superhero</code> with name <code>Spiderman</code> like <code>Spiderman 1</code>, <code>Spiderman 2</code> and <code>Spiderman 3</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">findmovie</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="adding-a-movie-screening-code-addscreening-code-code-as-code"><a class="link" href="#adding-a-movie-screening-code-addscreening-code-code-as-code">4.2.4. Adding a movie screening: <code>addscreening</code> | <code>as</code></a></h4>
 <div class="paragraph">
 <p><code>Available in v1.2</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/addScreening.gif" alt="addScreening" width="800">
+</div>
 </div>
 <div class="paragraph">
 <p>Alias: <code>as</code></p>
@@ -313,230 +840,25 @@ Adds a screening of the 2nd movie to the 3rd cinema&#8217;s 3rd theater.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background green">addscreening</code></p>
+<p>Keyword appearance on Command Line: <code class="purple-background white">addscreening</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="adding-theaters-code-addtheater-code-code-at-code"><a class="link" href="#adding-theaters-code-addtheater-code-code-at-code">4.5. Adding theaters: <code>addtheater</code> | <code>at</code></a></h3>
-<div class="paragraph">
-<p><code>Available in v1.2</code></p>
-</div>
-<div class="paragraph">
-<p>Alias: <code>at</code></p>
-</div>
-<div class="paragraph">
-<p>Adds theaters to a cinema.<br>
-Format: <code>addtheater n/CINEMA_NAME th/NUMBER_OF_THEATER</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>addtheater n/GV Bishan th/2</code></p>
-</li>
-<li>
-<p><code>at n/Cathay th/5</code></p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Number of theater must be positive
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background green">addtheater</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code-code-c-code"><a class="link" href="#clearing-all-entries-code-clear-code-code-c-code">4.6. Clearing all entries : <code>clear</code> | <code>c</code></a></h3>
-<div class="paragraph">
-<p>Alias: <code>c</code></p>
-</div>
-<div class="paragraph">
-<p>Clears all entries from MVP.<br>
-Format: <code>clear</code></p>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background red">clear</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="copying-schedule-code-copy-code-code-cp-code"><a class="link" href="#copying-schedule-code-copy-code-code-cp-code">4.7. Copying schedule: <code>copy</code> | <code>cp</code></a></h3>
-<div class="paragraph">
-<p><code>Coming in v2.0</code></p>
-</div>
-<div class="paragraph">
-<p>Alias: <code>cp</code></p>
-</div>
-<div class="paragraph">
-<p>Copies a theater schedule to a target theater schedule
-Format: <code>copy c/CINEMA th/THEATER sd/SOURCE_DATE tc/TARGET_CINEMA tth/TARGET_THEATER td/TARGET_DATE</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>copy c/Cathay th/1 sd/14/03/2018 tc/Cathay tth/1 td/15/03/2018</code></p>
-</li>
-<li>
-<p><code>cp c/Cathay Central th/1 sd/14/03/2018 tc/Cathay East tth/1 td/14/03/2018</code></p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>In the first example, you copy the schedule of Cathay&#8217;s theater 1 on 14/03/2018 to the
-next day 15/03/2018.</p>
-</li>
-<li>
-<p>In the second example, you copy the schedule of Cathay Central&#8217;s theater 1 to the schedule of
-Cathay East&#8217;s theater 1.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background green">copy</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deleting-a-cinema-code-delete-code-code-d-code"><a class="link" href="#deleting-a-cinema-code-delete-code-code-d-code">4.8. Deleting a cinema : <code>delete</code> | <code>d</code></a></h3>
-<div class="paragraph">
-<p>Alias: <code>d</code></p>
-</div>
-<div class="paragraph">
-<p>Deletes the specified cinema from MVP.<br>
-Format: <code>delete INDEX</code></p>
-</div>
-<div class="sidebarblock">
+<div class="sect3">
+<h4 id="deleting-a-screening-code-deletescreening-code-code-ds-code"><a class="link" href="#deleting-a-screening-code-deletescreening-code-code-ds-code">4.2.5. Deleting a screening: <code>deletescreening</code> | <code>ds</code></a></h4>
+<div class="imageblock">
 <div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Deletes the cinema at the specified <code>INDEX</code>.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the most recent listing.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
-</div>
+<img src="images/deleteScreening.gif" alt="deleteScreening" width="800">
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br>
-<code>delete 2</code><br>
-Deletes the 2nd cinema in MVP.</p>
-</li>
-<li>
-<p><code>find Cathay</code><br>
-<code>d 1</code><br>
-Deletes the 1st cinema in the results of the <code>find</code> command.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background red">delete</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deleting-a-movie-code-deletemovie-code-code-dm-code"><a class="link" href="#deleting-a-movie-code-deletemovie-code-code-dm-code">4.9. Deleting a movie : <code>deletemovie</code> | <code>dm</code></a></h3>
-<div class="paragraph">
-<p><code>Available in V1.2</code></p>
-</div>
-<div class="paragraph">
-<p>Alias: <code>dm</code></p>
-</div>
-<div class="paragraph">
-<p>Deletes the specified movie from MVP.<br>
-Format: <code>delete INDEX</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Deletes the movie at the specified <code>INDEX</code>.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the most recent listing.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br>
-<code>delete 2</code><br>
-Deletes the 2nd movie in MVP.</p>
-</li>
-<li>
-<p><code>find Marvel</code><br>
-<code>dm 1</code><br>
-Deletes the 1st movie in the results of the <code>find</code> command.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background red">deletemovie</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="deleting-a-screening-code-deletescreening-code-code-ds-code"><a class="link" href="#deleting-a-screening-code-deletescreening-code-code-ds-code">4.10. Deleting a screening: <code>deletescreening</code> | <code>ds</code></a></h3>
-<div class="paragraph">
-<p><code>Coming in v1.4</code></p>
+<p><code>Available in v1.4</code></p>
 </div>
 <div class="paragraph">
 <p>Alias: <code>ds</code></p>
 </div>
 <div class="paragraph">
-<p>Delete a screening of a movie from a cinema theater.<br>
-Format: <code>deletescreening m/MOVIE_INDEX c/CINEMA_INDEX th/THEATER h/SCREEN_DATE_TIME</code></p>
+<p>Delete a screening from a cinema theater using the screening&#8217;s start date and time.<br>
+Format: <code>deletescreening c/CINEMA_INDEX th/THEATER h/SCREEN_DATE_TIME</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -544,12 +866,12 @@ Format: <code>deletescreening m/MOVIE_INDEX c/CINEMA_INDEX th/THEATER h/SCREEN_D
 <div class="ulist">
 <ul>
 <li>
-<p><code>deletescreening m/1 c/2 th/1 h/05/05/2015 13:30</code><br>
-Deletes a screening of the 1st movie to the 2nd cinema&#8217;s 1st theater.</p>
+<p><code>deletescreening c/2 th/1 h/05/05/2015 13:30</code><br>
+Deletes a screening which screens on 05/05/2015 from the 2nd cinema&#8217;s 1st theater.</p>
 </li>
 <li>
 <p><code>ds m/2 c/3 th/3 h/11/11/2011 14:15</code><br>
-Deletes a screening of the 2nd movie to the 3rd cinema&#8217;s 3rd theater.</p>
+Deletes a screening which screens on 11/11/2011 from the 3rd cinema&#8217;s 3rd theater.</p>
 </li>
 </ul>
 </div>
@@ -572,9 +894,6 @@ Deletes a screening of the 2nd movie to the 3rd cinema&#8217;s 3rd theater.</p>
 <p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>The movie that is being deleted from screening must already exist in the MVP</p>
-</li>
-<li>
 <p>The cinema theater that is holding the screening must exist in the MVP</p>
 </li>
 </ul>
@@ -584,165 +903,23 @@ Deletes a screening of the 2nd movie to the 3rd cinema&#8217;s 3rd theater.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background red">deletescreening</code></p>
+<p>Keyword appearance on Command Line: <code class="purple-background white">deletescreening</code></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="deleting-theaters-code-deletetheater-code-code-dt-code"><a class="link" href="#deleting-theaters-code-deletetheater-code-code-dt-code">4.11. Deleting theaters: <code>deletetheater</code> | <code>dt</code></a></h3>
-<div class="paragraph">
-<p><code>Available in v1.2</code></p>
-</div>
-<div class="paragraph">
-<p>Alias: <code>dt</code></p>
-</div>
-<div class="paragraph">
-<p>Delete theaters from a cinema.<br>
-Format: <code>deletetheater n/CINEMA_NAME th/NUMBER_OF_THEATER</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>deletetheater n/Cathay th/9</code></p>
-</li>
-<li>
-<p><code>dt n/GV Bishan th/2</code></p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Number of theater must be positive
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background red">deletetheater</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-cinema-code-edit-code-code-e-code"><a class="link" href="#editing-a-cinema-code-edit-code-code-e-code">4.12. Editing a cinema: <code>edit</code> | <code>e</code></a></h3>
+<h3 id="email-related-commands"><a class="link" href="#email-related-commands">4.3. Email related commands</a></h3>
+<div class="sect3">
+<h4 id="emailing-schedule-code-email-code-code-eml-code"><a class="link" href="#emailing-schedule-code-email-code-code-eml-code">4.3.1. Emailing schedule: <code>email</code> | <code>eml</code></a></h4>
 <div class="paragraph">
-<p>Alias: <code>e</code></p>
+<p><code>Available in v1.3</code></p>
 </div>
-<div class="paragraph">
-<p>Edits an existing cinema in MVP.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS]</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Edits the cinema at the specified <code>INDEX</code>. The index refers to the index number shown in the last cinema listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>At least one of the optional fields must be provided.</p>
-</li>
-<li>
-<p>Existing values will be updated to the input values.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>edit 1 p/67124231 e/shaw@yahoo.com</code><br>
-Edits the phone number and email address of the 1st cinema to be <code>91234567</code> and <code>shaw@yahoo.com</code> respectively.</p>
-</li>
-<li>
-<p><code>e 2 n/Golden Village</code><br>
-Edits the name of the 2nd cinema to be <code>Golden Village</code>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background white">edit</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="editing-a-movie-code-editmovie-code-code-em-code"><a class="link" href="#editing-a-movie-code-editmovie-code-code-em-code">4.13. Editing a movie : <code>editmovie</code> | <code>em</code></a></h3>
-<div class="paragraph">
-<p><code>Available in V1.2</code></p>
-</div>
-<div class="paragraph">
-<p>Alias: <code>em</code></p>
-</div>
-<div class="paragraph">
-<p>Edits an existing movie in MVP.<br>
-Format: <code>editmovie INDEX [n/MOVIE_NAME] [d/DURATION] [r/RATING] [sd/START_DATE] [t/TAG]&#8230;&#8203;</code></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Edits the movie at the specified <code>INDEX</code>. The index refers to the index number shown in the last movie listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>At least one of the optional fields must be provided.</p>
-</li>
-<li>
-<p>Existing values will be updated to the input values.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>editmovie 1 d/90 r/M18</code><br>
-Edits the duration and rating of the 1st movie to be <code>90</code> and <code>M18</code> respectively.</p>
-</li>
-<li>
-<p><code>em 2 n/Spiderman 2</code><br>
-Edits the name of the 2nd movie to be <code>Spiderman 2</code>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background">editmovie</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="email-schedule-code-email-code-code-eml-code"><a class="link" href="#email-schedule-code-email-code-code-eml-code">4.14. Email schedule: <code>email</code> | <code>eml</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>eml</code></p>
 </div>
 <div class="paragraph">
 <p>Sends an email to target recipient.<br>
-Format: <code>email [msg/MESSAGE] [subj/SUBJECT] [recp/RECIPIENT] [func/&lt;send|clear&gt;] [lgn/user@gmail.com:PASSWORD]</code></p>
+Format: <code>email msg/MESSAGE subj/SUBJECT recp/RECIPIENT func/&lt;SEND|CLEAR&gt; lgn/EMAIL_USERNAME:EMAIL_PASSWORD [attc/RELATIVE_FILE_PATH]</code></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -787,7 +964,7 @@ Format: <code>email [msg/MESSAGE] [subj/SUBJECT] [recp/RECIPIENT] [func/&lt;send
 <div class="ulist">
 <ul>
 <li>
-<p><code>email msg/Hi Bob, Here is the schedule. subj/Schedule lgn/cmanager@gmail.com:1I2h@la recp/gv.manager@gmail.com func/send</code><br>
+<p><code>email msg/Hi Bob, Here is the schedule. subj/Schedule lgn/cmanager@gmail.com:1I2h@la recp/gv.manager@gmail.com attc/docs/images/Architecture.png func/send</code><br>
 Sends out an email to <code>gv.manager@gmail.com</code> with a message of the following details:</p>
 <div class="ulist">
 <ul>
@@ -800,6 +977,9 @@ Sends out an email to <code>gv.manager@gmail.com</code> with a message of the fo
 <li>
 <p>Message: <code>Hi Bob, Here is the schedule.</code></p>
 </li>
+<li>
+<p>Attachment: <code>Architecture.png</code></p>
+</li>
 </ul>
 </div>
 </li>
@@ -810,36 +990,32 @@ Edits the email message with <code>This will be a very long message, so I hope t
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background">email</code></p>
+<p>Keyword appearance on Command Line: <code class="purple-background white">email</code></p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="finding-cinemas-by-name-code-find-code-code-f-code"><a class="link" href="#finding-cinemas-by-name-code-find-code-code-f-code">4.15. Finding cinemas by name: <code>find</code> | <code>f</code></a></h3>
+<h3 id="security-related-commands"><a class="link" href="#security-related-commands">4.4. Security related commands</a></h3>
+<div class="sect3">
+<h4 id="encrypting-data-files-code-encrypt-code-code-enc-code"><a class="link" href="#encrypting-data-files-code-encrypt-code-code-enc-code">4.4.1. Encrypting data files : <code>encrypt</code> | <code>enc</code></a></h4>
 <div class="paragraph">
-<p>Alias: <code>f</code></p>
+<p><code>Available in v1.4</code></p>
 </div>
 <div class="paragraph">
-<p>Finds cinemas whose names contain any of the given keywords.<br>
-Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+<p>Alias: <code>enc</code></p>
+</div>
+<div class="paragraph">
+<p>Encrypts the <code>movieplanner.xml</code> using password provided by user.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>encrypt pw/PASSWORD</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>The search is case insensitive. e.g <code>cathay</code> will match <code>Cathay</code></p>
-</li>
-<li>
-<p>The order of the keywords does not matter. e.g. <code>Cathay West</code> will match <code>West Cathay</code></p>
-</li>
-<li>
-<p>Only the cinema is searched.</p>
-</li>
-<li>
-<p>Only full words will be matched e.g. <code>Cathay</code> will not match <code>Cathays</code></p>
-</li>
-<li>
-<p>Cinemas matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Cathay West</code> will return <code>Cathay East</code>, <code>West Village</code></p>
+<p>A <code>encryptedmovieplanner.xml</code> file is created/overwritten, upon the <code>encrypt</code> command.</p>
 </li>
 </ul>
 </div>
@@ -851,40 +1027,32 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>find Cathay</code><br>
-Returns <code>cathay</code> and <code>Cathay West</code></p>
-</li>
-<li>
-<p><code>f Golden Village North</code><br>
-Returns any cinema having names <code>Golden</code>, <code>Village</code>, or <code>North</code></p>
+<p><code>encrypt pw/password</code><br>
+You will be able to encrypt the <code>movieplanner.xml</code> and create a <code>encryptedmovieplanner.xml</code> using this password.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background blue">find</code></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="finding-movies-by-user-input-code-findmovie-code"><a class="link" href="#finding-movies-by-user-input-code-findmovie-code">4.16. Finding movies by user input: <code>findmovie</code></a></h3>
+<div class="sect3">
+<h4 id="decrypting-encrypted-data-files-code-decrypt-code-code-dec-code"><a class="link" href="#decrypting-encrypted-data-files-code-decrypt-code-code-dec-code">4.4.2. Decrypting encrypted data files : <code>decrypt</code> | <code>dec</code></a></h4>
 <div class="paragraph">
-<p><code>coming in V1.3</code></p>
+<p><code>Available in v1.4</code></p>
 </div>
 <div class="paragraph">
-<p>Alias: <code>fm</code></p>
+<p>Alias: <code>dec</code></p>
 </div>
 <div class="paragraph">
-<p>Finds movies based on the name, tag or start date.<br>
-Format: <code>findmovie [n/MOVIE_NAME] [t/TAG] [sd/START_DATE]</code></p>
+<p>Decrypts the <code>encryptedmovieplanner.xml</code> using password provided by user.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>decrypt pw/PASSWORD</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>The order of the keywords does not matter. e.g. <code>Cathay West</code> will match <code>West Cathay</code></p>
-</li>
-<li>
-<p>Only the movie is searched.</p>
+<p>A <code>movieplanner.xml</code> file is created/overwritten upon successful <code>decrypt</code> command. You will be prompt to restart the application to see changes.</p>
 </li>
 </ul>
 </div>
@@ -896,29 +1064,51 @@ Format: <code>findmovie [n/MOVIE_NAME] [t/TAG] [sd/START_DATE]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>findmovie n/zombie</code><br>
-Returns all movies which name contains keyword <code>zombie</code> like <code>Zombie Graveyard</code> and <code>attack the zombie</code></p>
-</li>
-<li>
-<p><code>fm cat/horror</code><br>
-Returns all movies which belongs to the tag <code>horror</code> like <code>Insidious</code> and <code>Conjuring</code></p>
-</li>
-<li>
-<p><code>findmovie sd/02/02/2018</code><br>
-Returns all movies with <code>StartDate = 09/11/2017</code> like <code>Ah Boys to Men 4</code></p>
-</li>
-<li>
-<p><code>findmovie n/Spiderman cat/superhero</code><br>
-Returns all movies from tag <code>superhero</code> with name <code>Spiderman</code> like <code>Spiderman 1</code>, <code>Spiderman 2</code> and <code>Spiderman 3</code></p>
+<p><code>decrypt pw/password</code><br>
+You will be able to decrypt the <code>encryptedmovieplanner.xml</code> and obtain a <code>movieplanner.xml</code> if the password is the same as the one used for encryption.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background blue">findmovie</code></p>
+<p><a href="#">Back to top</a></p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-history-of-entered-commands-code-history-code-code-hist-code"><a class="link" href="#listing-history-of-entered-commands-code-history-code-code-hist-code">4.17. Listing history of entered commands : <code>history</code> | <code>hist</code></a></h3>
+<h3 id="miscellaneous-commands"><a class="link" href="#miscellaneous-commands">4.5. Miscellaneous commands</a></h3>
+<div class="sect3">
+<h4 id="viewing-help-code-help-code-code-h-code"><a class="link" href="#viewing-help-code-help-code-code-h-code">4.5.1. Viewing help : <code>help</code> | <code>h</code></a></h4>
+<div class="paragraph">
+<p>Alias: <code>h</code></p>
+</div>
+<div class="paragraph">
+<p>Format: <code>help</code></p>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">help</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="clearing-all-entries-code-clear-code-code-c-code"><a class="link" href="#clearing-all-entries-code-clear-code-code-c-code">4.5.2. Clearing all entries : <code>clear</code> | <code>c</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.0</code></p>
+</div>
+<div class="paragraph">
+<p>Alias: <code>c</code></p>
+</div>
+<div class="paragraph">
+<p>Clears all entries from MVP.<br>
+Format: <code>clear</code></p>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">clear</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="listing-history-of-entered-commands-code-history-code-code-hist-code"><a class="link" href="#listing-history-of-entered-commands-code-history-code-code-hist-code">4.5.3. Listing history of entered commands : <code>history</code> | <code>hist</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.0</code></p>
+</div>
 <div class="paragraph">
 <p>Alias: <code>hist</code></p>
 </div>
@@ -941,65 +1131,14 @@ Format: <code>history</code></p>
 </table>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background">history</code></p>
+<p>Keyword appearance on Command Line: <code class="purple-background white">history</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="jump-to-a-specified-date-code-jump-code-code-j-code"><a class="link" href="#jump-to-a-specified-date-code-jump-code-code-j-code">4.18. Jump to a specified date : <code>jump</code> | <code>j</code></a></h3>
+<div class="sect3">
+<h4 id="redoing-the-previously-undone-command-code-redo-code-code-r-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code-code-r-code">4.5.4. Redoing the previously undone command : <code>redo</code> | <code>r</code></a></h4>
 <div class="paragraph">
-<p><code>Available in 1.3</code></p>
+<p><code>Available in v1.0</code></p>
 </div>
-<div class="paragraph">
-<p>Alias: <code>j</code></p>
-</div>
-<div class="paragraph">
-<p>Jumps to a specified date in the scheduler.<br>
-Format: <code>jump dd/mm/yyyy</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>jump 28/03/2018</code><br>
-You will be able to see the schedule of 28/03/2018</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Remember to select on a cinema before executing the jump command.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background">history</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="listing-all-cinemas-code-list-code-code-l-code"><a class="link" href="#listing-all-cinemas-code-list-code-code-l-code">4.19. Listing all cinemas : <code>list</code> | <code>l</code></a></h3>
-<div class="paragraph">
-<p>Alias: <code>l</code></p>
-</div>
-<div class="paragraph">
-<p>Shows a list of all cinemas in MVP.<br>
-Format: <code>list</code></p>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background yellow">list</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code-code-r-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code-code-r-code">4.20. Redoing the previously undone command : <code>redo</code> | <code>r</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>r</code></p>
 </div>
@@ -1033,58 +1172,14 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background red">redo</code></p>
+<p>Keyword appearance on Command Line: <code class="purple-background white">redo</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="selecting-a-cinema-code-select-code-code-s-code"><a class="link" href="#selecting-a-cinema-code-select-code-code-s-code">4.21. Selecting a cinema : <code>select</code> | <code>s</code></a></h3>
+<div class="sect3">
+<h4 id="undoing-previous-command-code-undo-code-code-u-code"><a class="link" href="#undoing-previous-command-code-undo-code-code-u-code">4.5.5. Undoing previous command : <code>undo</code> | <code>u</code></a></h4>
 <div class="paragraph">
-<p>Alias: <code>s</code></p>
+<p><code>Available in v1.0</code></p>
 </div>
-<div class="paragraph">
-<p>Selects the cinema identified by the index number used in the last cinema listing.<br>
-Format: <code>select INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Selects the cinema and loads all the theaters with their schedules at the specified <code>INDEX</code>.</p>
-</li>
-<li>
-<p>The index refers to the index number shown in the most recent listing.</p>
-</li>
-<li>
-<p>The index <strong>must be a positive integer</strong> <code>1, 2, 3, &#8230;&#8203;</code></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br>
-<code>select 2</code><br>
-Selects the 2nd cinema in MVP.</p>
-</li>
-<li>
-<p><code>find Cathay</code><br>
-<code>s 1</code><br>
-Selects the 1st cinema in the results of the <code>find</code> command.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background">select</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code-code-u-code"><a class="link" href="#undoing-previous-command-code-undo-code-code-u-code">4.22. Undoing previous command : <code>undo</code> | <code>u</code></a></h3>
 <div class="paragraph">
 <p>Alias: <code>u</code></p>
 </div>
@@ -1131,33 +1226,82 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </ul>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background red">undo</code></p>
+<p>Keyword appearance on Command Line: <code class="purple-background white">undo</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.23. Exiting the program : <code>exit</code></a></h3>
+<div class="sect3">
+<h4 id="jumping-to-a-specified-date-code-jump-code-code-j-code"><a class="link" href="#jumping-to-a-specified-date-code-jump-code-code-j-code">4.5.6. Jumping to a specified date : <code>jump</code> | <code>j</code></a></h4>
+<div class="paragraph">
+<p><code>Available in 1.3</code></p>
+</div>
+<div class="paragraph">
+<p>Alias: <code>j</code></p>
+</div>
+<div class="paragraph">
+<p>Jumps to a specified date in the scheduler.<br>
+Format: <code>jump dd/mm/yyyy</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jump 28/03/2018</code><br>
+You will be able to see the schedule of 28/03/2018</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Remember to select on a cinema before executing the jump command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">jump</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="listing-all-cinemas-and-movies-code-list-code-code-l-code"><a class="link" href="#listing-all-cinemas-and-movies-code-list-code-code-l-code">4.5.7. Listing all cinemas and movies : <code>list</code> | <code>l</code></a></h4>
+<div class="paragraph">
+<p><code>Available in v1.0</code></p>
+</div>
+<div class="paragraph">
+<p>Alias: <code>l</code></p>
+</div>
+<div class="paragraph">
+<p>Shows a list of all cinemas and movies in MVP.<br>
+Format: <code>list</code></p>
+</div>
+<div class="paragraph">
+<p>Keyword appearance on Command Line: <code class="purple-background white">list</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.5.8. Exiting the program : <code>exit</code></a></h4>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 <div class="paragraph">
-<p>Keyword appearance on Command Line: <code class="black-background red">exit</code></p>
+<p>Keyword appearance on Command Line: <code class="purple-background white">exit</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">4.24. Saving the data</a></h3>
+<div class="sect3">
+<h4 id="saving-the-data"><a class="link" href="#saving-the-data">4.5.9. Saving the data</a></h4>
 <div class="paragraph">
 <p>Movie planner data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">4.25. Encrypting data files <code>[coming in v2.0]</code></a></h3>
-<div class="paragraph">
-<p><em>{explain how the user can enable/disable data encryption}</em></p>
-</div>
-<div class="paragraph">
-<p><a href="#">Back to top</a></p>
 </div>
 </div>
 </div>
@@ -1211,9 +1355,9 @@ There is no need to save manually.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AddTheater</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addtheater n/CINEMA_NAME th/NUMBER_OF_THEATER</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addtheater CINEMA_INDEX th/NUMBER_OF_THEATER</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>at</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addtheater n/GV Bishan th/2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addtheater 1 th/2</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Clear</strong></p></td>
@@ -1242,9 +1386,9 @@ There is no need to save manually.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DeleteScreening</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletescreening m/MOVIE_INDEX c/CINEMA_INDEX th/THEATER h/SCREEN_DATE_TIME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletescreening c/CINEMA_INDEX th/THEATER h/SCREEN_DATE_TIME</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ds</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletescreening m/1 c/2 th/1 h/05/05/2015 13:30</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deletescreening c/2 th/1 h/05/05/2015 13:30</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DeleteTheater</strong></p></td>
@@ -1265,7 +1409,7 @@ There is no need to save manually.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>find Cathay</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>jump</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Jump</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jump dd/mm/yyyy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>j</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>jump 28/03/2018</code></p></td>
@@ -1393,7 +1537,7 @@ visual indicators.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-04 01:13:24 UTC
+Last updated 2018-04-05 16:05:25 UTC
 </div>
 </div>
 </body>
